@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando TagName</title>
+    <style>
+        body{
+            background-color: lightblue;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Treinando o GetElementsByTagName</h1>
+    <p>Troque essa letra de branco para azul</p>
+    <p>E esta de branco para coral</p>
+
+
+    <script>
+        var p1 = document.getElementsByTagName('p')[0]
+        p1.style.color = 'blue'
+        var p2 = document.getElementsByTagName('p')[1]
+        p2.style.color = 'Lightcoral'
+    </script>
+</body>
+</html>

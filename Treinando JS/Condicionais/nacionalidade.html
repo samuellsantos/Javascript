@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Você é Brasileiro ou estrangeiro?</h1>
+    Qual país você nasceu? <input type="text" name="nome" id="nome">
+    <input type="button" value="Verificar" id="ver" onclick="clicar()">
+    <div id="resultado">
+    </div>
+
+    
+
+    <script>
+        var verificar = document.getElementById("ver")
+        var n = document.getElementById("nome")
+        function clicar(){
+            var res = document.getElementById("resultado")
+            if(n.value == "Brasil"){
+                res.innerHTML = `Nascendo no ${n.value} você é Brasileiro`
+            }
+            else{
+                res.innerHTML = `Nascendo no ${n.value} você é Estrangeiro`
+            }
+        }
+    </script>
+</body>
+</html>

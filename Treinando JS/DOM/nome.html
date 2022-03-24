@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Treinando....</title>
+    <style>
+        body{
+            background-color: lightsalmon;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        p{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1 name="titulo">Treinando o uso do getElementsByName</h1>
+    <p name="first">Coloque o fundo deste parágrafo coral</p>
+    <p name="second">troque a cor da letra para branca e o fundo roxo</p>
+
+
+    <script>
+        var p1 = document.getElementsByName('first')[0]
+        p1.style.backgroundColor = 'lightcoral'
+
+        var p2 = document.getElementsByName('second')[0]
+        p2.style.backgroundColor = 'purple'
+        p2.style.color = 'white'
+        
+        var d = document.getElementsByName('titulo')[0]
+        d.style.color = 'white'
+        
+        
+    </script>
+</body>
+</html>

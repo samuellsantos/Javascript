@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selecionando elementos por ID</title>
+    <style>
+        body{
+            background-color: lightcoral;
+            color: black;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1>Treinando o uso do GetElementsById</h1>
+    <p id="first">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium molestias explicabo magni? Aut, vero? Maiores animi cumque laudantium, sed, quam sint alias tempore ipsam ratione praesentium distinctio, obcaecati ex placeat?</p>
+    <p>Aqui vai um parágrago aleatório</p>
+
+
+
+<script>
+    var d = document.getElementById('first')
+    document.write(d.innerText)
+    d.style.backgroundColor = 'blue'
+    d.style.color = "white"
+</script>
+
+</body>
+</html>

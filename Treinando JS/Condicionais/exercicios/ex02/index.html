@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nota_Aluno</title>
+</head>
+<body>
+    <h1>Descubra se o aluno foi aprovado</h1>
+    Primeira nota:  <input type="number" name="n1" id="n1">
+    Segunda Nota:  <input type="number" name="n2" id="n2">
+    <input type="button" value="Verificar" onclick="media()">
+
+
+    <script>
+        function media(){
+            var n1 =  document.getElementById("n1")
+            var n2 =  document.getElementById("n2")
+            var nota1 = Number(n1.value)
+            var nota2 = Number(n2.value)
+            var Media = (nota1 + nota2) / 2
+            if(Media == 10){
+                alert(`A nota do aluno foi ${Media}, Aprovado com Distinção!`)
+            }else if(Media >=7 && Media <=10){
+                alert(`A nota do aluno foi ${Media}, Aprovado!`)
+            }else if (Media < 7){
+                alert(`A nota do aluno foi ${Media}, Reprovado!`)
+            }else{
+                alert("[ERROR]")
+            }
+        }
+    </script>
+</body>
+</html>
