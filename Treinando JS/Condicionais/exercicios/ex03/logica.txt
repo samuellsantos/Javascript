@@ -1,0 +1,18 @@
+
+Quais são os dados de entrada necessários?
+R:  3 Números
+
+O que eu devo fazer com esses dados?
+R:  Comparar qual é o maior entre eles
+
+Quais restrições desse problema?
+R:  Devem ser 3 números diferentes
+
+Qual é o resultado esperado?
+R: O maior número dentre 3
+
+Qual é a sequência de passos para chegar ao resultado esperado?
+R: 
+Pedir 3 números
+Comparar qual o maior
+mostrar na tela o maior número
