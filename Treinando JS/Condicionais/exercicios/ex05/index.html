@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Digite três números e veja qual é o maior e o menor entre eles...</h1>
+    Digite o primeiro número: <input type="number" name="n1" id="n1">
+    Segundo: <input type="number" name="n2" id="n2">
+    Terceiro: <input type="number" name="n3" id="n3">
+    <input type="button" value="Maior" onclick="maior()">
+    <input type="button" value="Menor" onclick="menor()"> 
+
+    <script>
+        function maior(){
+            var n1 = document.getElementById("n1")
+            var n2 = document.getElementById("n2")
+            var n3 = document.getElementById("n3")
+            var num1 = Number(n1.value)
+            var num2 = Number(n2.value)
+            var num3 = Number(n3.value)
+
+            if(num1 > num2 && num1 > num3){
+                alert(`Maior: ${num1}`)
+            }else if(num2 > num1 && num2 > num3){
+                alert(`Maior: ${num2}`)
+            }else if(num3 > num1 && num3 > num2){
+                alert(`Mairo: ${num3}`)
+            }
+        }
+        function menor(){
+            var n1 = document.getElementById("n1")
+            var n2 = document.getElementById("n2")
+            var n3 = document.getElementById("n3")
+            var num1 = Number(n1.value)
+            var num2 = Number(n2.value)
+            var num3 = Number(n3.value)
+            
+            if(num1 < num2 && num1 < num3){
+                alert(`Menor: ${num1}`)
+            }else if (num2 < num1 && num2 < num3){
+                alert(`Menor ${num2}`)
+            }else if (num3 < num1 && num3 < num2){
+                alert(`Menor: ${num3}`)
+            }
+        }
+    </script>
+</body>
+</html>
