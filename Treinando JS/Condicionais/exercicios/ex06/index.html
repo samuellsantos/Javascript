@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Digite três números e veja-os em ordem decrescente</h1>
+    Primeiro:<input type="number" name="n1" id="n1">
+    Segundo:<input type="number" name="n2" id="n2">
+    Terceiro:<input type="number" name="n3" id="n3">
+    <input type="button" value="exibir em ordem decrescente" onclick="exibir()">
+
+    <script>
+        function exibir(){
+            var n1 = document.getElementById("n1")
+            var n2 = document.getElementById("n2")
+            var n3 = document.getElementById("n3")
+            var num1 = Number(n1.value)
+            var num2 = Number(n2.value)
+            var num3 = Number(n3.value)
+            var aux = num1
+            
+            if (num2 > num1){
+                aux = num2
+                num2 = num1
+                num1 = aux
+            }if (num3 > num1){
+                aux = num3
+                num3 = num1
+                num1 = aux
+            }if (num3 > num2){
+                aux = num3
+                num3 = num2
+                num2 = aux
+            }
+            alert(`${num1} -- ${num2} -- ${num3}`)
+        }
+    </script>
+</body>
+</html>
