@@ -6,14 +6,20 @@ function contar(){
     var numPasso = document.getElementById('passo')
     var passo = Number(numPasso.value)
     var contagem = document.getElementById('contagem')
-    if (inicio < fim && passo != 0){
-        for (;inicio <= fim; inicio+=passo){
-            alert(`${inicio}`)
-            contagem.textContent = `${inicio}`
-            contagem.textContent = `${inicio}`
+
+    contagem.innerHTML = 'Contando....'
+    if(inicio < fim && passo > 0){
+        for( var c = inicio; c <= fim; c += passo){
+        contagem.innerHTML += ` ${c}`
         }
-    }else{
-        alert('[ERROR]')
+    }else if (inicio > fim && passo > 0){
+        for(var c = inicio; c >= fim; c -= passo){
+            contagem.innerHTML += ` ${c}`
+        }
+    }
+    else{
+        alert(`[ERROR]`)
+        contagem.innerHTML = 'Impossível contar'
     }
 
 
