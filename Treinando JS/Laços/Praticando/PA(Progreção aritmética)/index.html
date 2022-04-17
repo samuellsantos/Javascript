@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PA matemática</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <h1>Descubra a PA de um número</h1>
+        <p>Digite o termo inicial:<input type="number" name="tinicial" id="tinicial" class="destaque"></p>
+        <p>Digite a razão: <input type="number" name="razão" id="razão"  class="destaque"></p>
+        <p>Até qual termo? <input type="number" name="termo" id="termo"  class="destaque"></p>
+        <p><input type="button" value="Gerar PA" onclick="PA()" id="button"></p>
+        <p id="res">
+            Aqui vai o resultado da PA: <br>
+        </p>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
