@@ -11,9 +11,20 @@ function aleatorio(){
 
 
 /* Entre 0 e 10 */
-var button = document.getElementById('action')
+/* var button = document.getElementById('action')
 button.addEventListener('click', aleatorio)
 function aleatorio(){
     var res = document.getElementById('res')
     res.innerHTML = Math.floor(10*Math.random())
+} */
+
+
+
+/* Entre 1 e 10 */
+var button = document.getElementById('action')
+button.addEventListener('click', aleatorio)
+function aleatorio(){
+    var res = document.getElementById('res')
+    res.innerHTML = Math.floor(10*Math.random() +1)
 }
+
