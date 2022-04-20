@@ -25,6 +25,6 @@ var button = document.getElementById('action')
 button.addEventListener('click', aleatorio)
 function aleatorio(){
     var res = document.getElementById('res')
-    res.innerHTML = Math.floor(10*Math.random() +1)
+    res.innerHTML = `O número gerado foi: ${Math.floor(10*Math.random() +1)}`
 }
 
