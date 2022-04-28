@@ -15,26 +15,50 @@
     <h1>
         Realizando o exercício 8
     </h1>
-    <p>
-        As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver um script que calculará os reajustes.
+        <h2>As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contrataram para desenvolver um script que calculará os reajustes.</h1>
 
-        Faça um script que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:
+        <h3>Faça um script que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, baseado no salário atual:</h2>
+        <ul>
+            <li>
+                salários até R$ 280,00 (incluindo) : aumento de 20%
+            </li>
+            <li>
+                salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
+            </li>
+            <li>
+                salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
+            </li>
+            <li>
+                salários de R$ 1500,00 em diante : aumento de 5%
+            </li>
+        </ul>
         
-        salários até R$ 280,00 (incluindo) : aumento de 20%
-        salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
-        salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
-        salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado,informe na tela:
-        o salário antes do reajuste;
-        o percentual de aumento aplicado;
-        o valor do aumento;
-        o novo salário, após o aumento. <br>
-        <label for="n">Digite o seu salário:</label>
+
+
+        <h3>Após o aumento ser realizado,informe na tela:</h3>
+        <ul>
+            <li>
+                o salário antes do reajuste;
+            </li>
+            <li>
+                o percentual de aumento aplicado;
+            </li>
+            <li>
+                o valor do aumento;
+            </li>
+            <li>
+                o novo salário, após o aumento.
+            </li>
+        </ul>
+        
+
+
+ <br>
+        <label for="n" style="font-weight: bold;">Digite o seu salário:</label>
         <input type="number" name="n" id="n" >
         <input type="button" value="Iniciar script" onclick="script()">
         <div id="res">
-            O resultado vai aqui
         </div>
         <script src="script.js"></script>
-    </p>
 </body>
 </html>
