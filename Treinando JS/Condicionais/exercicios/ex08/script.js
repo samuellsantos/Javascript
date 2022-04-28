@@ -1,8 +1,10 @@
+var limparBtn = document.getElementById('limpar')
+limparBtn.style.display = 'none'
 function script(){
     var Salario = document.getElementById('n')
     var salario = Number(Salario.value)
     var resultado = document.getElementById('res')
-
+    limparBtn.style.display = 'inline'
     if(salario > 0){
         /* SALARIOS ATÉ R$280,00 */
         if(salario <= 280){
@@ -49,4 +51,10 @@ function script(){
     }else{
         alert("[ERRO] Observe os seus dados e tente novamente")
     }
+}
+
+function limpar(){
+    var resultado = document.getElementById('res')
+    resultado.innerHTML = ""
+    limparBtn.style.display = 'none'
 }
