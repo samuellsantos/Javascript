@@ -22,6 +22,7 @@
     <div>
         <img src="verde.png" id="verde">
         <input type="button" value="Preto" onclick="preto()" >
+        <input type="button" value="Azul" onclick="azul('azul.jpg')">
         
     </div>
 
@@ -30,8 +31,8 @@
         function preto(){
             const verde = document.getElementById('verde').src = "preto.jpg"
         }
-        function azul(){
-            const verde = document.get
+        function azul(color){
+            const verde = document.getElementById('verde').src = color;
         }
     </script>
 </body>
