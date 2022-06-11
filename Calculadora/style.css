@@ -55,6 +55,12 @@ main input{
     border-radius: 50%;
     cursor: pointer;
 }
+.firstLine input, .equal{
+    background-color: rgb(172, 0, 240);
+}
+.equal{
+    background-color: ;
+}
 main input:hover{
     background-color: #f92561de;
 }
