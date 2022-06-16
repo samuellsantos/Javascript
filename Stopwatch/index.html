@@ -11,13 +11,13 @@
     <h1>
         Stopwatch
     </h1>
-    <p>
-        00:00
+    <p id="counter">
+        00:00:00
     </p>
     <div class="buttons">
-        <input type="button" value="Start" id="start">
-        <input type="button" value="Stop" id="stop">
-        <input type="button" value="Reset" id="reset">
+        <input type="button" value="Start" id="start" onclick="start()">
+        <input type="button" value="Pause" id="pause" onclick="pause()">
+        <input type="button" value="Reset" id="reset" onclick="restart()">
     </div>
 
 
