@@ -26,7 +26,9 @@
         var m = new Date().getMinutes();
         var s = new Date().getSeconds();
         if(m < 10){
-            m = m +'0'
+            m = '0' + m
+        }if(s < 10){
+            s = '0' + s
         }
         hours.innerHTML = h;
         minutes.innerHTML = m;
