@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clock</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <p class="hours" id="hours">00</p>
+      <span>:</span>
+      <p class="minutes" id="minutes">00</p>
+      <span>:</span>
+      <p class="seconds" id="seconds">00</p>
+    </div>
+
+    <script>
+        function relogio(){
+        var hours = document.getElementById("hours");
+        var minutes = document.getElementById("minutes");
+        var seconds = document.getElementById("seconds");
+
+        var h = new Date().getHours();
+        var m = new Date().getMinutes();
+        var s = new Date().getSeconds();
+        if(m < 10){
+            m = m +'0'
+        }
+        hours.innerHTML = h;
+        minutes.innerHTML = m;
+        seconds.innerHTML = s;
+        
+    }
+    setInterval(relogio, 1000)
+    </script>
+  </body>
+</html>
