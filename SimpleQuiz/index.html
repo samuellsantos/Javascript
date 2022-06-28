@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ - Presidentes do Brasil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Resolva esse quiz sobre os presidentes do Brasil
+        </h1>
+        <div class="firstquestion">
+            <p>
+                [1].Em que ano foi proclamada a República do Brasil e qual foi o primeiro Presidente ?
+            </p>
+            <input type="radio" name="alternativas" id="alternativa_a"> 
+            <label for="alternativa_a" id="falso">1822, Dom Pedro |</label> <br>
+
+            <input type="radio" name="alternativas" id="alternativa_b">
+            <label for="alternativa_b" class="falso">1894, Prudente de Morais</label> <br>
+
+            <input type="radio" name="alternativas" id="alternativa_c"> 
+            <label for="alternativa_c" id="correct" class="correct">1889, Marechal Deodoro da Fonseca</label>
+        </div>
+
+<!--         <div class="secondquestion">
+            <p>
+                [2].Qual presidente anunciou a construção e Brasília ?
+            </p>
+            <input type="radio" name="alternativasq2" id="alternativa_aq2"> 
+            <label for="alternativa_aq2" id="falso">
+                Getúlio Vargas</label> <br>
+
+            <input type="radio" name="alternativasq2" id="alternativa_bq2">
+            <label for="alternativa_bq2" class="falso">
+                Juscelino Kubitschek</label> <br>
+
+            <input type="radio" name="alternativasq2" id="alternativa_cq2"> 
+            <label for="alternativa_cq2" id="correct" class="correct">
+                Jânio Quadros</label>
+        </div> -->
+        <input type="button" value="Verificar Resposta" onclick="answer()">
+    </div>
+
+
+    <script>
+        function answer(){
+            let a = document.getElementById('alternativa_a')
+            let b = document.getElementById('alternativa_b')
+            let c = document.getElementById('alternativa_c')
+            let correct = document.getElementById('correct')
+            let falso = document.getElementsById('falso')
+            if(c.checked){
+                alert("Parabéns, Você acertou!")
+                correct.style.color = 'green'
+                falso.style.color = 'red'
+            }
+
+
+        }
+    </script>
+</body>
+</html>
