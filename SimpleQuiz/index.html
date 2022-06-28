@@ -17,31 +17,32 @@
                 [1].Em que ano foi proclamada a República do Brasil e qual foi o primeiro Presidente ?
             </p>
             <input type="radio" name="alternativas" id="alternativa_a"> 
-            <label for="alternativa_a" id="falso">1822, Dom Pedro |</label> <br>
+            <label for="alternativa_a" id="errado">1822, Dom Pedro |</label> <br>
 
             <input type="radio" name="alternativas" id="alternativa_b">
-            <label for="alternativa_b" class="falso">1894, Prudente de Morais</label> <br>
+            <label for="alternativa_b" id="secondfalse">1894, Prudente de Morais</label> <br>
 
             <input type="radio" name="alternativas" id="alternativa_c"> 
-            <label for="alternativa_c" id="correct" class="correct">1889, Marechal Deodoro da Fonseca</label>
+            <label for="alternativa_c" id="correct">1889, Marechal Deodoro da Fonseca</label>
         </div>
 
-<!--         <div class="secondquestion">
+        <div class="secondquestion">
             <p>
                 [2].Qual presidente anunciou a construção e Brasília ?
             </p>
+            <!-- q = question -->
             <input type="radio" name="alternativasq2" id="alternativa_aq2"> 
-            <label for="alternativa_aq2" id="falso">
+            <label for="alternativa_aq2">
                 Getúlio Vargas</label> <br>
 
             <input type="radio" name="alternativasq2" id="alternativa_bq2">
-            <label for="alternativa_bq2" class="falso">
+            <label for="alternativa_bq2" id="correct2">
                 Juscelino Kubitschek</label> <br>
 
             <input type="radio" name="alternativasq2" id="alternativa_cq2"> 
-            <label for="alternativa_cq2" id="correct" class="correct">
+            <label for="alternativa_cq2">
                 Jânio Quadros</label>
-        </div> -->
+        </div>
         <input type="button" value="Verificar Resposta" onclick="answer()">
     </div>
 
@@ -52,14 +53,36 @@
             let b = document.getElementById('alternativa_b')
             let c = document.getElementById('alternativa_c')
             let correct = document.getElementById('correct')
-            let falso = document.getElementsById('falso')
-            if(c.checked){
-                alert("Parabéns, Você acertou!")
+            let alternativaA = document.getElementById('alternativa_aq2')
+            let B2 = document.getElementById('alternativa_bq2')
+            let alternativaC = document.getElementById('alternativa_cq2')
+            let correct2 = document.getElementById('correct2')
+            let respostasCertas;
+            
+            if(c.checked && B2.checked){
                 correct.style.color = 'green'
-                falso.style.color = 'red'
+                correct2.style.color = 'green'
+                respostasCertas = 2
+                alert(`Você acertou ${respostasCertas} de 2`)
+            }else if(c.checked){
+                correct.style.color = 'green'
+                correct2.style.color = 'yellow'
+                respostasCertas = 1;
+                alert(`Você acertou ${respostasCertas} de 2`)
+            }else if(B2.checked){
+                correct2.style.color = 'green'
+                correct.style.color = 'yellow'
+                respostasCertas = 1;
+                alert(`Você acertou ${respostasCertas} de 2`)
+            }
+            else {
+                correct.style.color = 'yellow'
+                correct2.style.color = 'yellow'
+                respostasCertas = 0;
+                alert(`Você acertou ${respostasCertas} de 2`)
             }
 
-
+        
         }
     </script>
 </body>
