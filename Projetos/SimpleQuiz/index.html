@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QUIZ - Presidentes do Brasil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>
+            Resolva esse quiz sobre os presidentes do Brasil
+        </h1>
+        <div class="firstquestion">
+            <p>
+                [1].Em que ano foi proclamada a República do Brasil e qual foi o primeiro Presidente ?
+            </p>
+            <input type="radio" name="alternativas" id="alternativa_a"> 
+            <label for="alternativa_a" id="errado">1822, Dom Pedro |</label> <br>
+
+            <input type="radio" name="alternativas" id="alternativa_b">
+            <label for="alternativa_b" id="secondfalse">1894, Prudente de Morais</label> <br>
+
+            <input type="radio" name="alternativas" id="alternativa_c"> 
+            <label for="alternativa_c" id="correct">1889, Marechal Deodoro da Fonseca</label>
+        </div>
+
+        <div class="secondquestion">
+            <p>
+                [2].Qual presidente anunciou a construção e Brasília ?
+            </p>
+            <!-- q = question -->
+            <input type="radio" name="alternativasq2" id="alternativa_aq2"> 
+            <label for="alternativa_aq2">
+                Getúlio Vargas</label> <br>
+
+            <input type="radio" name="alternativasq2" id="alternativa_bq2">
+            <label for="alternativa_bq2" id="correct2">
+                Juscelino Kubitschek</label> <br>
+
+            <input type="radio" name="alternativasq2" id="alternativa_cq2"> 
+            <label for="alternativa_cq2">
+                Jânio Quadros</label>
+        </div>
+        <input type="button" value="Verificar Resposta" onclick="answer()">
+    </div>
+
+
+    <script>
+        function answer(){
+            let a = document.getElementById('alternativa_a')
+            let b = document.getElementById('alternativa_b')
+            let c = document.getElementById('alternativa_c')
+            let correct = document.getElementById('correct')
+            let alternativaA = document.getElementById('alternativa_aq2')
+            let B2 = document.getElementById('alternativa_bq2')
+            let alternativaC = document.getElementById('alternativa_cq2')
+            let correct2 = document.getElementById('correct2')
+            let respostasCertas;
+            
+            if(c.checked && B2.checked){
+                correct.style.color = 'green'
+                correct2.style.color = 'green'
+                respostasCertas = 2
+                alert(`Você acertou ${respostasCertas} de 2`)
+            }else if(c.checked){
+                correct.style.color = 'green'
+                correct2.style.color = 'yellow'
+                respostasCertas = 1;
+                alert(`Você acertou ${respostasCertas} de 2`)
+            }else if(B2.checked){
+                correct2.style.color = 'green'
+                correct.style.color = 'yellow'
+                respostasCertas = 1;
+                alert(`Você acertou ${respostasCertas} de 2`)
+            }
+            else {
+                correct.style.color = 'yellow'
+                correct2.style.color = 'yellow'
+                respostasCertas = 0;
+                alert(`Você acertou ${respostasCertas} de 2`)
+            }
+
+        
+        }
+    </script>
+</body>
+</html>

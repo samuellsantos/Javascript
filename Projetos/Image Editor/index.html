@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Editor</title>
+    <script src="https://kit.fontawesome.com/e29fd8182b.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/boxicons@2.1.2/dist/boxicons.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Easy Image Editor</h2>
+        <div class="wrapper">
+            <div class="editor-panel">
+                <div class="filter">
+                    <label class="title">Filters</label>
+                    <div class="options">
+                        <button class="active">Brightness</button>
+                        <button>Saturation</button>
+                        <button>Inverstion</button>
+                        <button>Grayscale</button>
+                    </div>
+                    <div class="slider">
+                        <div class="filter-info">
+                            <p class="name">Brightness</p>
+                            <p class="value">100%</p>
+                        </div>
+                        <input type="range" value="100" min="0" max="200">
+                    </div>
+                </div>
+
+                <div class="rotate">
+                    <label class="title">Rotate & Flip</label>
+                    <div class="options">
+                        <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWRJREFUSEu1lI0xBEEQhb+LABkQASJABkRABogAESACREAGiAAREAIRUF/VjJrdm7+9q+uqrau97e7X/fp1z1ixzVacn0UA7oGT3sKmAKwDz8AO9BfWC2BSkwui9cZ1OUrH3YiSd+AJeAC+anT1VJIDSHNeAlclkBqAgT6aFL0Aa+H9ADgETsO73RzlQEoANyH4FjgLgfIvyHYygxT4HDBuYDmATeAzeO0C8p3aWKaCvAHfgJ0N/EsAser425K9oMdhFpHWaXJrIMQuXoH91DfXgRX81pRRADNGmjZaADpOWqbgn43LdeCQVEpuwCWmIkUfQdL/fjmAOFgHZ8s9FofsZg8OYW3R1L1P9RSEipWptjX2LwG4C4+Av3PaTlpKj2C6lFWK4ke3dg/4Sa5o/GZiz0SkY4776Ng6dq6+c1C6zuY6M5Bs5b0AaT5BLsIfVmyHFrD0ue5RUdGnRdFSyRfZ1smAf2m5PhkkjFGAAAAAAElFTkSuQmCC"/></i></button>
+                        <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAV9JREFUSEu1lIExBEEQRd9FgAgQASJABIgAESACRIAMyEAGiAAREAIRUK9q5mpu9mZndtmuujrqev7v/v27Z0wcs4nxGUNwD5y0FjaG4Ad4A/aBrxrRWAJxBZdEsmK0EmwDB8Ah4N9pnALKtjRaCK6Ay54i/0TwGCoX/w7w/6dA9g3sJRJZiJ+F6OvgHLgBciCH/B7A45BvgbNQhO/mUSJQ59eQ5SCfkzfLbJrmbwKfMb9EEHV/GOB5uzD8rhJY8W6wYVp9zfad30sdqO0KsNayTAmqnTuj65pEJhktNk6r7rwrAajhOrBT29QEPQ5ah82XsUSgU46BIUNeTQwRB16UYAP4CNW1dGG+c+scvz6N4/LUjppyuN3KepRatDZEW9aiW6ETZfNc5NczOu4lbHfzqTBREq3nGcjjIiyVv5u3cCJqNs3B1FgAj1vsSK93jlv+cKjP/22TBwOVHkzewS9llUUZRKZYiQAAAABJRU5ErkJggg=="/></i></button>
+                        <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJdJREFUSEvNlVkOgCAMBctN9WTqSTXPYILQBQRi+a3MlMdioMkjTOaTO8EZV1zdWPWHEexfsBPR0rnxmA/OPfKIEAGK60cJ4FvK5QRgSxJtDx74q3FJIEkkQQqvFnASTpDDmwRaXKhx8GbBoZysbkEOHxoR1/mwTZZiGXJMtcyt+2detOlPhdWh/9f09xVYDRT11j+aP8EFpK4uGVVoSHgAAAAASUVORK5CYII="/></button>
+                        <button><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAKRJREFUSEvV1NENgCAMBNBjMh1FJ1Mn1fBBQoC2h4UY/dR6T2whYPIVJufjU2ADcJArvADE+uqyVsAgYnjULCDWaIgazgISYob3ACVChfcCCVmlhr5pMjlEchnTZBdSAneWlp557lVj6glrvUvtg6G/yBU2Yorirl4A7OyX9ExRfmScLMICrfOIQhhAO+xMxAKY41pFNIAJT70WEWsF7LCIdf8HHrBUHhkF46nIAAAAAElFTkSuQmCC"/></button>
+                    </div>
+                </div>
+            </div>       
+            <div class="preview-img">
+                <img src="image-placeholder.svg" alt="preview-img">
+            </div>
+        </div>
+            <div class="controls">
+                <button class="reset-filter">
+                    Reset Filters
+                </button>
+                <div class="row">
+                    <button class="choose-img">Choose Image</button>
+                    <button class="save-img">Save Image</button>
+                </div>
+            </div>
+        </div>
+</body>
+</html>

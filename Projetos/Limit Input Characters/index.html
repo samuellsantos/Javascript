@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Limit input Character</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form action="#">
+            <span id="arroba">
+                @
+            </span>
+            <input type="text" name="txt" id="txt" placeholder="Enter your text" maxlength="16">
+            <span id="count">
+                16
+            </span>
+
+        </form>
+    </div>
+    <p id="msg">
+        Máximo de caracteres atingidos
+    </p>
+
+    <script>
+        let input = document.querySelector('input')
+        let contador = document.getElementById('count')
+        maxLength = input.getAttribute('maxlenght')
+        let msg = document.getElementById('msg')
+
+        input.onkeyup = ()=>{
+            contador.innerText = 16 - input.value.length
+            if(input.value.length == 16){
+                input.style.border = '2px solid red'
+                msg.style.display = 'block'
+            }else{
+                msg.style.display = 'none'
+            }
+        }
+
+    </script>
+</body>
+</html>
